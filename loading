@@ -1,4 +1,3 @@
-
 --// Blur Effect
 local blur = Instance.new("BlurEffect")
 blur.Size = 6
@@ -41,7 +40,6 @@ TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextTransparency = 0.1
 
--- *** ROBLOX SAFE STYLIZED TEXT ***
 TextLabel.Text = "ＭＡＫＥ  ＳＵＲＥ  ＴＨＥ  ＳＥＲＶＥＲ  ＩＳ  ＮＯＴ  ＦＵＬＬ  ＴＯ  ＬＯＡＤ  ＴＨＥ  ＳＣＲＩＰＴ"
 
 TextLabel.Parent = Box
@@ -49,27 +47,21 @@ TextLabel.Parent = Box
 --// SMOOTH BREATHING LIGHT (INCLUDING TEXT)
 task.spawn(function()
     while true do
-        -- LUMILIWANAG
         for i = 1, 50 do
             local t = i / 50
-
             Box.BackgroundTransparency = 0.35 - (t * 0.20)
             UIStroke.Transparency = 0.4 - (t * 0.25)
             TextLabel.TextTransparency = 0.35 - (t * 0.35)
             blur.Size = 6 + (t * 2)
-
             task.wait(0.02)
         end
 
-        -- HUMIHINA
         for i = 1, 50 do
             local t = (50 - i) / 50
-
             Box.BackgroundTransparency = 0.35 - (t * 0.20)
             UIStroke.Transparency = 0.4 - (t * 0.25)
             TextLabel.TextTransparency = 0.35 - (t * 0.35)
             blur.Size = 6 + (t * 2)
-
             task.wait(0.02)
         end
     end
